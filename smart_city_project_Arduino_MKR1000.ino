@@ -3,6 +3,7 @@
 #include <PMS5003.h>
 // MKR1000 Pins setup
 const int SLEEP_PIN = 6; // this pin is for setting the sensor to sleep while it is not taking the data.
+const String uuid = ""; // This is the place where you should put your UUID 
 
 // method setup
 const String content_type = "application/x-www-form-urlencoded";// this is for POST method
@@ -67,7 +68,7 @@ void loop() {
   }
   
   
-  postData ="PM1=" + PM1 + "&PM2_5=" + PM2_5 + "&PM10=" + PM10 + "&Temperature=" + temperature + "&Humadity=" + humadity;
+  postData ="uuid=" + uuid + "&PM1=" + PM1 + "&PM2_5=" + PM2_5 + "&PM10=" + PM10 + "&Temperature=" + temperature + "&Humadity=" + humadity;
   
   Serial.println("making POST request");
   client.post("/",content_type,postData);// the conntent in content_type is for doing POST method.
