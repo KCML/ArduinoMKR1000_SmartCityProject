@@ -3,7 +3,7 @@
 #include <PMS5003.h>
 // MKR1000 Pins setup
 const int SLEEP_PIN = 6; // this pin is for setting the sensor to sleep while it is not taking the data.
-const String uuid = ""; // This is the place where you should put your UUID 
+const String uuid = ""; // This is the place where you should put your UUID. It is also fro future application.
 
 // method setup
 const String content_type = "application/x-www-form-urlencoded";// this is for POST method
